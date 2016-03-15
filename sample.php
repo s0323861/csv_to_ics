@@ -73,16 +73,18 @@ if (is_uploaded_file($_FILES['upfile']['tmp_name'])) {
       fputs($fp, $common);
       $common = "CALSCALE:GREGORIAN" . "\n";
       fputs($fp, $common);
-      $common = "BEGIN:VEVENT" . "\n";
-      fputs($fp, $common);
 
       // write data
       for($count = 0; $count < $i; $count++){
+        $common = "BEGIN:VEVENT" . "\n";
+        fputs($fp, $common);
         for($j = 0; $j < count($header_item); $j++){
           $data_item = explode(",", $data[$count]);
           $item = $header_item[$j] . ":" . $data_item[$j] . "\n";
           fputs($fp, $item);
         }
+        $common = "END:VEVENT" . "\n";
+        fputs($fp, $common);
       }
 
       // write footer part
