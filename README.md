@@ -15,9 +15,9 @@ A simple PHP application to convert .csv file to .ics file.
 
 ### Demo
 
-  - http://ical.tsukuba42195.top/csvtoics.php
+  - http://s0323861.moo.jp/tools/csv_to_ics/
 
 
 ### Licence
 
-  - Copyright 2016 Akira Mukai. Licensed under the MIT License
+  - Copyright 2016-2021 Akira Mukai. Licensed under the MIT License
