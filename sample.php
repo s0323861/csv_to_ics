@@ -5,13 +5,13 @@ if (is_uploaded_file($_FILES['upfile']['tmp_name'])) {
   $finfo = new finfo(FILEINFO_MIME_TYPE);
 
   if (!isset($_FILES['upfile']['error']) || !is_int($_FILES['upfile']['error'])) {
-    $error = "パラメータが不正です (parameter is incorrect.)";
+    $error = "parameter is incorrect.";
   }elseif ($_FILES['upfile']['size'] > 1000000) {
-    $error = "ファイルサイズが大きすぎます (file size is too large.)";
+    $error = "file size is too large.";
   }elseif (!$ext = array_search(
     $finfo->file($_FILES['upfile']['tmp_name']),
     array('csv' => 'text/plain'), true)) {
-    $error = "ファイル形式が不正です (file format is incorrect.)";
+    $error = "file format is incorrect.";
   }
 
   if(empty($error)){
@@ -194,7 +194,7 @@ if (is_uploaded_file($_FILES['upfile']['tmp_name'])) {
 
     <h1 class="page-header">
     <i class="fa fa-wrench"></i> CSV to ICS Converter<br>
-    <small>CSV形式からICS形式へファイルを変換します。</small>
+    <small>CSV</small>
     </h1>
 
     </div>
@@ -213,7 +213,7 @@ if (is_uploaded_file($_FILES['upfile']['tmp_name'])) {
       <div class="bs-component">
         <div class="alert alert-dismissible alert-danger">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
-          <strong>エラー！ (error)</strong> {$error}
+          <strong>ERROR！ (error)</strong> {$error}
         </div>
       </div>
 EOM;
@@ -227,12 +227,12 @@ EOM;
         <legend><i class="fa fa-cloud-upload"></i></legend>
 
         <div class="form-group">
-          <label for="inputSubject" class="control-label">ファイルを選択 (select .csv file)</label>
+          <label for="inputSubject" class="control-label">select .csv file</label>
           <input type="file" name="upfile" class="form-control" id="inputSubject" placeholder="Select ics file" value="<?php echo $_POST["upfile"]; ?>" required>
         </div>
 
         <div class="form-group">
-          <button type="submit" class="btn btn-primary"><i class="fa fa-wrench"></i> 変換する (Convert)</button>
+          <button type="submit" class="btn btn-primary"><i class="fa fa-wrench"></i> Convert</button>
         </div>
 
         </fieldset>
@@ -254,14 +254,14 @@ EOM;
         <div class="alert alert-dismissible alert-info">
         <p>
 DTSTART,DTEND,DTSTAMP,UID,DESCRIPTION,LAST-MODIFIED,LOCATION,SEQUENCE,STATUS,SUMMARY<br>
-20150325,20150326,20140401T060631Z,c695jtap6pa4q8v3s0redru5mk@google.com,,20140401T060147Z,,0,CONFIRMED,卒業式<br>
-20150312,20150313,20140401T060631Z,spk3ifbeiitv3od8ramb7nih44@google.com,,20140401T060136Z,,0,CONFIRMED,個別学力検査（後期日程）<br>
-20150227,20150228,20140401T060631Z,e7fbc1m84eqijdd7tirds43a5s@google.com,,20140401T060054Z,,0,CONFIRMED,再試験成績入力締切<br>
-20150225,20150227,20140401T060631Z,srvlhof67qbvm0ghlinu6nfjbo@google.com,,20140401T060020Z,,0,CONFIRMED,個別学力検査（前期日程）<br>
-20150223,20150224,20140401T060631Z,b51l5hak83ggfku5dl4f907ab0@google.com,,20140401T055942Z,,0,CONFIRMED,1～3年次成績入力締切<br>
-20150218,20150219,20140401T060631Z,qv875ojca7gct92btvkjkqdsag@google.com,,20140401T055906Z,,0,CONFIRMED,4年次成績入力締切<br>
-20150117,20150119,20140401T060631Z,nl52u8j05h10suhav4etobf4ac@google.com,,20140401T055738Z,,0,CONFIRMED,大学入試センター試験<br>
-20150116,20150117,20140401T060631Z,snkvcj0f5ld63urcjtvpmk3jq8@google.com,,20140401T055711Z,,0,CONFIRMED,休講（大学入試センター試験試験場設営・下見）<br>
+20150325,20150326,20140401T060631Z,c695jtap6pa4q8v3s0redru5mk@google.com,,20140401T060147Z,,0,CONFIRMED,<br>
+20150312,20150313,20140401T060631Z,spk3ifbeiitv3od8ramb7nih44@google.com,,20140401T060136Z,,0,CONFIRMED,<br>
+20150227,20150228,20140401T060631Z,e7fbc1m84eqijdd7tirds43a5s@google.com,,20140401T060054Z,,0,CONFIRMED,<br>
+20150225,20150227,20140401T060631Z,srvlhof67qbvm0ghlinu6nfjbo@google.com,,20140401T060020Z,,0,CONFIRMED,<br>
+20150223,20150224,20140401T060631Z,b51l5hak83ggfku5dl4f907ab0@google.com,,20140401T055942Z,,0,CONFIRMED,<br>
+20150218,20150219,20140401T060631Z,qv875ojca7gct92btvkjkqdsag@google.com,,20140401T055906Z,,0,CONFIRMED,<br>
+20150117,20150119,20140401T060631Z,nl52u8j05h10suhav4etobf4ac@google.com,,20140401T055738Z,,0,CONFIRMED,<br>
+20150116,20150117,20140401T060631Z,snkvcj0f5ld63urcjtvpmk3jq8@google.com,,20140401T055711Z,,0,CONFIRMED,<br>
        </p>
        </div>
      </div>
