@@ -284,6 +284,7 @@ DTSTART,DTEND,DTSTAMP,UID,DESCRIPTION,LAST-MODIFIED,LOCATION,SEQUENCE,STATUS,SUM
   <footer>
   <div class="row">
     <div class="col-lg-12">
+    <p>Modified by Someone</a></p>
     <p>Copyright (C) 2016 <a href="http://tsukuba42195.top/">Akira Mukai</a></p>
     </div>
     <!-- /.col-lg-12 -->
