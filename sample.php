@@ -121,7 +121,7 @@ if (is_uploaded_file($_FILES['upfile']['tmp_name'])) {
 <meta name="author" content="Akira Mukai">
 <title>CSV to ICS Converter</title>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <style type="text/css">
   body { padding-top: 80px; }
   @media ( min-width: 768px ) {
@@ -284,7 +284,7 @@ DTSTART,DTEND,DTSTAMP,UID,DESCRIPTION,LAST-MODIFIED,LOCATION,SEQUENCE,STATUS,SUM
   <footer>
   <div class="row">
     <div class="col-lg-12">
-    <p>Copyright (C) 2016 <a href="http://tsukuba42195.top/">Akira Mukai</a></p>
+    <p>Copyright (C) 2016-2021 <a href="http://s0323861.moo.jp/">Akira Mukai</a></p>
     </div>
     <!-- /.col-lg-12 -->
   </div>
